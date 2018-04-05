@@ -4,8 +4,8 @@
   "description": "Demo Rest API",
   "main": "server.js",
   "scripts": {
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-server": "cross-env NODE_ENV=development nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server/server.ts",
+    "build-server": "tslint --project . && tsc"
   },
   "keywords": [
     "koa",
@@ -15,13 +15,18 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.5.0",
-    "koa-router": "^7.4.0"
+    "koa-body": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.0.13"
   },
   "devDependencies": {
     "@types/koa": "^2.0.44",
     "@types/koa-router": "^7.0.27",
     "nodemon": "^1.17.3",
     "ts-node": "^5.0.1",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "tslint": "5.7.0",
+    "cross-env": "5.0.5"
   }
 }
