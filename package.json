@@ -4,7 +4,7 @@
   "description": "Demo Rest API",
   "main": "server.js",
   "scripts": {
-    "watch-server": "cross-env NODE_ENV=development nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server/server.ts",
+    "watch-server": "cross-env NODE_ENV=development nodemon --watch 'src/server/**/*' -e ts,tsx --exec ts-node src/server/server.ts",
     "build-server": "tslint --project . && tsc"
   },
   "keywords": [
@@ -17,12 +17,14 @@
     "koa": "^2.5.0",
     "koa-body": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
+    "koa-cors": "0.0.16",
     "koa-router": "^7.4.0",
     "mongoose": "^5.0.13"
   },
   "devDependencies": {
     "@types/koa": "^2.0.44",
     "@types/koa-router": "^7.0.27",
+    "@types/mongoose": "^4.7.3",
     "nodemon": "^1.17.3",
     "ts-node": "^5.0.1",
     "typescript": "^2.8.1",
