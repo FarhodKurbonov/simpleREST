@@ -4,7 +4,7 @@
   "description": "Demo Rest API",
   "main": "server.js",
   "scripts": {
-    "watch-server": "cross-env NODE_ENV=development nodemon --watch 'src/server/**/*' -e ts,tsx --exec ts-node src/server/server.ts",
+    "watch-server": "cross-env NODE_ENV=development nodemon -L --watch  'src/server/**/*' -e ts,tsx --exec ts-node src/server/server.ts",
     "build-server": "tslint --project . && tsc"
   },
   "keywords": [
