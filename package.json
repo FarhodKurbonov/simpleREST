@@ -4,8 +4,8 @@
   "description": "Demo Rest API",
   "main": "server.js",
   "scripts": {
-    "watch-server": "cross-env NODE_ENV=development nodemon -L --watch  'src/server/**/*' -e ts,tsx --exec ts-node src/server/server.ts",
-    "build-server": "tslint --project . && tsc"
+    "server:dev": "nodemon  -w  src/ --inspect srs/server/server.js -e ts --exec ts-node src/server/server.ts",
+    "start": "npm run server:dev "
   },
   "keywords": [
     "koa",
