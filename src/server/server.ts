@@ -22,7 +22,7 @@ app.use(routes);
 
     try { 
         app.listen(config.port);
-        console.info(config.logColor ? '\ x1b[32m%s\x1b[0m' : '%s', `Listening to http://localhost:${config.port}`);
+        console.info(config.logColor ? '\x1b[32m%s\x1b[0m' : '%s', `Listening to http://localhost:${config.port}`);
 
     } catch (error) {
         console.error(config.logColor ? '\x1b[31m%s\x1b[0m' : '%s', error);
